@@ -9,7 +9,9 @@ const LedStatusMonitor = () => {
 
   const fetchLedStatus = async (color: string) => {
     try {
-      const response = await fetch(`led/${color}`);
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/led/${color}`
+      );
       const status = await response.text();
       return status;
     } catch {
