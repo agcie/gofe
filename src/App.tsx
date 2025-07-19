@@ -29,7 +29,7 @@ const LedStatusMonitor = () => {
 
   useEffect(() => {
     fetchAllLedStatuses();
-    const interval = setInterval(fetchAllLedStatuses, 9000);
+    const interval = setInterval(fetchAllLedStatuses, 800);
     return () => clearInterval(interval);
   }, []);
 
